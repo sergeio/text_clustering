@@ -100,14 +100,14 @@ def translator(clusters, paragraph_map):
 
     return map(cluster_translator, clusters)
 
-def cluster_paragraphs(paragraphs):
+def cluster_paragraphs(paragraphs, num_clusters=2):
     word_lists = make_word_lists(paragraphs)
     word_set = make_word_set(word_lists)
     word_vectors = make_word_vectors(word_set, word_lists)
 
     paragraph_map = dict(zip(map(str, word_vectors), paragraphs))
 
-    k_means = KMeans(2, word_vectors)
+    k_means = KMeans(num_clusters, word_vectors)
     k_means.main_loop()
     return translator(k_means.clusters, paragraph_map)
 
