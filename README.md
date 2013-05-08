@@ -1,11 +1,9 @@
-k-means
-=======
+text-clustering
+===============
 
-An implementation of the K-Means clustering algorithm, that can be used to
-find clusters of similar texts.
-
-Uses cosine similarity ([link](https://github.com/sergeio/text_comparer)) as
-the internal distance metric.
+An implementation of textual clustering, using k-means for clustering, and
+cosine similarity ([link](https://github.com/sergeio/text_comparer)) as the
+distance metric.
 
 Ideal use case:
 ```python
