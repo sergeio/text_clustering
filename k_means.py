@@ -7,7 +7,7 @@ class KMeans(object):
     """K-Means clustering. Uses cosine similarity as the distance function."""
 
     def __init__(self, k, vectors):
-        assert vectors >= k
+        assert len(vectors) >= k
         self.centers = random.sample(vectors, k)
         self.clusters = [[] for c in self.centers]
         self.vectors = vectors
