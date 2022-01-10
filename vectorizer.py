@@ -41,7 +41,7 @@ def vectorize_text(text):
 
     def remove_punctuation(text):
         """Removes special characters from text."""
-        return re.sub('[,.?";:\-!@#$%^&*()]', '', text)
+        return re.sub('[,.? \";:\-!@#$%^&*()]',' ', text)
 
     def remove_common_words(text_vector):
         """Removes 50 most common words in the uk english.
